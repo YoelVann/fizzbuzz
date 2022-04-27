@@ -40,6 +40,8 @@ describe("Test for ExplorerService class", () => {
         usernames.forEach(username => {
             if(listUsernames.includes(username)){
                 usernameContained = true;
+            }else{
+                usernameContained = false;
             }
         });
 
