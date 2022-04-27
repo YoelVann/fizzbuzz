@@ -16,7 +16,6 @@ describe("Tests for the Reader class", () => {
         const jsonPath = path.join(__dirname, '..', '..', '..', 'explorers.json');
         const explorers = Reader.readJsonFile(jsonPath);
 
-        console.log(explorers)
         expect( typeof explorers).toBe('object');
     });
 });
