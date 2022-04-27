@@ -35,16 +35,16 @@ describe("Test for ExplorerService class", () => {
         const usernames = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
         const listUsernames = explorersInNodeMission.map(explorer => explorer.githubUsername);
         
-        let usernameContained = false;
+        let usernameContained = [];
 
         usernames.forEach(username => {
             if(listUsernames.includes(username)){
-                usernameContained = true;
+                usernameContained.push(true);
             }else{
-                usernameContained = false;
+                usernameContained.push(false);
             }
         });
 
-        expect(usernameContained).toBe(true);
+        expect(usernameContained.every( user => user === true)).toBe(true);
     });
 });
